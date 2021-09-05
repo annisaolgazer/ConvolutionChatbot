@@ -1,0 +1,116 @@
+version: "2.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say hello anytime the user greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Selalu menjawab mengenai pengolahan citra
+  steps:
+  - intent: image_processing
+  - action: utter_pcd
+  - action: utter_pcd1
+  - action: utter_tanya
+
+# - rule: Selalu menjawab mengenai citra
+#   steps:
+#   - intent: citra
+#   - action: utter_citra
+#   - action: utter_tanya
+
+- rule: Selalu menjawab mengenai piksel
+  steps:
+  - intent: piksel
+  - action: utter_piksel
+  - action: utter_piksel1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai filter
+  steps:
+  - intent: filter
+  - action: utter_filter
+  - action: utter_filter1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai kernel
+  steps:
+  - intent: kernel
+  - action: utter_kernel
+  - action: utter_kernel1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai konvolusi
+  steps:
+  - intent: konvolusi
+  - action: utter_konvolusi
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai rumus konvolusi
+  steps:
+  - intent: rumus_konvolusi
+  - action: utter_rumus
+  - action: utter_rumus1
+  - action: utter_rumus2
+  - action: utter_rumus3
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai step konvolusi
+  steps:
+  - intent: step_konvolusi
+  - action: utter_step
+  - action: utter_step1
+  - action: utter_step2
+  - action: utter_step3
+  - action: utter_step4
+  - action: utter_step5
+  - action: utter_step6
+  - action: utter_step7
+  - action: utter_step8
+  - action: utter_step9
+  - action: utter_step10
+  - action: utter_step11
+  - action: utter_step12
+  - action: utter_step13
+  - action: utter_step14
+  - action: utter_step15
+  - action: utter_step16
+  - action: utter_step17
+  - action: utter_step18
+  - action: utter_step19
+  - action: utter_step20
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai hasil konvolusi
+  steps:
+  - intent: hasil_konvolusi
+  - action: utter_hasil
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai border
+  steps:
+  - intent: border
+  - action: utter_border
+  - action: utter_border1
+  - action: utter_border2
+  - action: utter_border3
+  - action: utter_border4
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai konvolusi
+  steps:
+  - intent: citra
+  - action: utter_konvolusi
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai konvolusi
+  steps:
+  - intent: citra
+  - action: utter_konvolusi
+  - action: utter_tanya

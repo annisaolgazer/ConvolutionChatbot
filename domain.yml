@@ -1,0 +1,154 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - thank
+  - image_processing
+  - citra
+  - piksel
+  - filter
+  - border
+  - kernel
+  - konvolusi
+  - step_konvolusi
+  - hasil_konvolusi
+  - fungsi_konvolusi
+  - rumus_konvolusi
+
+responses:
+  utter_greet:
+  - text: "Oh, Halo! Ada yang bisa aku bantu?"
+
+  utter_goodbye:
+  - text: "Oke, kalau gitu aku tutup percakapannya ya, bye! Jangan bosan ngobrol sama aku ya!"
+
+  utter_pcd:
+  - text: "Seringkali citra mengalami penurunan mutu (degradasi), misalnya mengandung (noise), warnanya terlalu kontras, kurang tajam, kabur (blurring), dan sebagainya."
+  utter_pcd1:
+  - text: "Citra semacam ini menjadi lebih sulit diinterpretasi sehingga citra tersebut perlu dimanipulasi menjadi citra lain yang kualitasnya lebih baik. Nah, bidang studi yang menyangkut hal ini adalah pengolahan citra (image processing)."
+    image: "https://imgur.com/Ar8r8zQ.jpg"
+
+  utter_citra:
+  - text: "Citra adalah gambar pada bidang dwimatra dua dimensi. Tetapi jika ditinjau dari sudut pandang matematis, citra merupakan fungsi menerus (continue) dari intensitas cahaya pada bidang dwimatra"
+
+  utter_piksel:
+  - text: "Piksel adalah unsur gambar atau representasi sebuah titik terkecil dalam sebuah gambar grafis yang dihitung per inci."
+  utter_piksel1:
+  - text: "Oh iya! piksel itu sendiri berasal dari akronim bahasa Inggris loh 'Picture Element' yang disingkat menjadi Pixel."
+
+  utter_filter:
+  - text: "Filter itu salah satu operasi yang paling penting dalam meningkatkan kualitas citra loh!"
+  utter_filter1:
+  - text: "Komputasi untuk suatu pixel pada citra keluaran melibatkan pixelpixel tetangga pada citra masukannya, maka dari itu Filter bisa dibilang komputasi level lokal"
+
+  utter_border:
+  - text: "Bisa kamu lihat di hasil konvolusi, bagian pinggir (border) matriks pixel citra baru tidak memiliki nilai" 
+    image: "https://i.imgur.com/T5GkGIL.jpg"
+  utter_border1:
+  - text: "Ada 3 alternatif cara yang dapat dilakukan:"
+  utter_border2:
+  - text: "1. Pixel-pixel pinggir diabaikan, tidak di-konvolusi. Solusi ini banyak dipakai, maka pixel-pixel pinggir nilainya tetap sama seperti citra asal."
+    image: "https://i.imgur.com/5xA1RAu.jpg"
+  utter_border3:
+  - text: "2. Duplikasi elemen citra, misalnya elemen kolom pertama disalin ke kolom M+1, begitu juga sebaliknya, lalu konvolusi dapat dilakukan terhadap pixel-pixel pinggir tersebut."
+  utter_border4:
+  - text: "3. Elemen yang ditandai dengan “?” diasumsikan bernilai 0 atau konstanta yang lain, sehingga konvolusi pixel-pixel pinggir dapat dilakukan"
+
+  utter_kernel:
+  - text: "Kernel konvolusi dinyatakan dalam bentuk matriks (umumnya 3 x 3, namun ada juga yang berukuran 2 x 2 atau 2 x 1 atau 1 x2)."
+    image: "https://i.imgur.com/CFCH5W3.jpg"
+  utter_kernel1:
+  - text: "Ukuran matriks ini biasanya lebih kecil dari ukuran citra. Hasil konvolusi sangat bergantung dari nilai koefisen kernel filter"
+
+  utter_konvolusi:
+  - text: "Konvolusi (convolution) adalah sebuah proses dimana citra dimanipulasi dengan menggunakan eksternal mask / subwindows untuk menghasilkan citra yang baru."
+
+  utter_hasil:
+  - text: "Ini contoh hasil konvolusi"
+    image: "https://i.imgur.com/0AVRf3f.jpg"
+
+  utter_fungsi:
+  - text: "Konvolusi berguna pada proses pengolahan citra seperti menghilangkan Noise, pelembutan citra/ image smoothing, penajaman citra, special effect (sepia filter, emboss filter, dll), ekstraksi ciri (deteksi tepi)"
+
+  utter_rumus:
+  - text: "I'(u,v) = Nilai hasil konvolusi di koordinat u,v"
+  utter_rumus1:
+  - text: "(i,j) = koordinat koefisen kernel"
+  utter_rumus2:
+  - text: "I(u,v) = Nilai pixel dari citra sumber"
+  utter_rumus3:
+  - text: "H(i,j) = nilai kooefisen kernel di koordinat i,j"
+    image: "https://i.imgur.com/2JeMNeh.jpg"
+    
+
+  utter_step:
+  - text: "Operasi konvolusi dilakukan dengan menggeser kernel konvolusi pixel per pixelHasil konvolusi disimpan di koordinat (u, v) yang ditandai dengan titik origin dalam matriks yang baru"
+    image: "https://i.imgur.com/crqSzhv.jpg"
+  utter_step1:
+  - text: "I'(u,v) = (P1 * A) + (P2 * B) + (P3 *C) + (P4*D) + (P5 * E) + (P6 * F) + (P7 * G) + (P8 * H) + (P9 * I))"
+  utter_step2:
+  - text: "Konvolusi diawali dari koordinat pojok kiri atas, hasil konvolusi disimpan pada koordinat yang bersesuaian dengan titik origin kernel"
+  utter_step3:
+  - text: "Misalkan diketahui citra input dengan ukuran 5 x 5, dikonvolusikan dengan kernel berukuran 3 x 3"
+    image: "https://imgur.com/79xLXfF.jpg"
+  utter_step4:
+  - text: "Tempatkan kernel pada sudut kiri atas, kemudian hitung nilai pixel pada posisi (0, 0) dari citra input"
+    image: "https://i.imgur.com/HeyNiNB.jpg"
+  utter_step5:
+  - text: "I'(1,1) = (4 * 0) + (4*-1)+(3*0)+(6*-1)+(6*4) + (5*-1)+(5*0)+(6*-1)+(6*0) = 3"
+    image: "https://imgur.com/aCZSn16.jpg"
+  utter_step6:
+  - text: "Geser kernel satu pixel ke kanan, kemudian hitung nilai pixel pada posisi (0,1) dari citra input:"
+  utter_step7:
+  - text: "I'(1,2) = (4 * 0) + (3*-1)+(5*0)+(6*-1)+(5*4) + (5*-1)+(6*0)+(6*-1)+(6*0) = 0"
+    image: "https://imgur.com/8MiQWHg.jpg"
+  utter_step8:
+  - text: "Geser kernel satu pixel ke kanan, kemudian hitung nilai pixel pada posisi (0,2) dari citra input:"
+  utter_step9:
+  - text: "I'(1,3) = (3 * 0) + (5*-1)+(4*0)+(5*-1)+(5*4) + (2*-1)+(6*0)+(6*-1)+(2*0) = 2"
+    image: "https://i.imgur.com/H4RDTlR.jpg"
+  utter_step10:
+  - text: "Selanjutnya, geser kernel satu pixel ke bawah, lalu mulai lagi melakukan konvolusi dari sisi kiri citra. Setiap kali konvolusi, geser kernel satu pixel ke kanan:"
+  utter_step11:
+  - text: "I'(2,1) = (6 * 0) + (6*-1)+(5*0)+(5*-1)+(6*4) + (6*-1)+(6*0)+(7*-1)+(5*0) = 0"
+    image: "https://imgur.com/UPJq6wl.jpg"
+  utter_step12:
+  - text: "proses selanjutnya dilakukan seperti tahap sebelumnya"
+  utter_step13:
+  - text: "I'(2,2) = (6 * 0) + (5*-1)+(5*0)+(6*-1)+(6*4) + (6*-1)+(7*0)+(5*-1)+(5*0) = 2"
+    image: "https://i.imgur.com/9yEXG1K.jpg"
+  utter_step14:
+  - text: "Geser kernel satu pixel ke kanan, kemudian hitung nilai pixel pada posisi (1,2) dari citra input, dan disimpan di koordinat (2,3) di matriks citra baru:"
+  utter_step15:
+  - text: "I'(2,3) = (5 * 0) + (5*-1)+(2*0)+(6*-1)+(6*4) + (2*-1)+(5*0)+(5*-1)+(3*0) = 6"
+    image: "https://imgur.com/p4mtypK.jpg"
+  utter_step16:
+  - text: "Dengan cara yang sama seperti di atas, maka pixel-pixel pada baris ketiga dikonvolusi sehingga menghasilkan"
+  utter_step17:
+  - text: "I'(3,1) = (5 * 0) + (6*-1)+(6*0)+(6*-1)+(7*4) + (5*-1)+(3*0)+(5*-1)+(2*0) = 3"
+  utter_step18:
+  - text: "I'(3,2) = (6 * 0) + (6*-1)+(6*0)+(7*-1)+(5*4) + (5*-1)+(5*0)+(2*-1)+(4*0) = 0"
+  utter_step19:
+  - text: "I'(3,3) = (6 * 0) + (6*-1)+(2*0)+(5*-1)+(5*4) + (3*-1)+(2*0)+(4*-1)+(4*0) = 2"
+    image: "https://imgur.com/Xgv1hMI.jpg"
+  utter_step20:
+  - text: "Dengan catatan : jika hasil konvolusi menghasilkan nilai pixel negatif, maka nilai tersebut dijadikan 0, jika hasil konvolusi menghasilkan nilai pixel lebih besar dari nilai keabuan maksimum, maka nilai tersebut dijadikan ke nilai keabuan maksimum (operasi clipping)."
+  
+  utter_did_that_help:
+  - text: "Apakah sudah cukup membantu?"
+
+  utter_tanya:
+  - text: "Ada yang mau ditanyakan lagi?"
+
+  utter_noworries:
+  - text: "Sama-sama, jangan sungkan bertanya lagi ya!"
+
+  utter_tanya_lagi:
+  - text: "Apa yang mau kamu tanyakan lagi?"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

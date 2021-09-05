@@ -1,0 +1,272 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - pagi
+    - siang
+    - sore
+    - malam
+    - hola
+    - selamat pagi
+    - selamat malam
+    - selamat siang
+    - selamat sore
+    - hoy
+    - hai
+    - hei
+    - slmt pagi
+    - slmt siang
+    - slmt sore
+    - slmt malam
+    - met pagi
+    - met siang
+    - met sore
+    - met malam
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - dah
+    - dadah
+    - sampai jumpa
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - iya
+    - ya
+    - betul
+    - benar
+    - bnr
+    - iye
+    - sangat membantu
+    - membantu
+    - sebentar
+    - ada
+
+- intent: deny
+  examples: |
+    - no
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - bukan
+    - engga
+    - tidak
+    - jangan
+    - ga
+    - g
+    - cukup
+    - tidak ada
+    - ckp
+    - nda
+    - gak
+    - enggak
+    - cukup sih
+    - belum
+
+- intent: thank
+  examples: |
+    - thankyou
+    - thanks
+    - makasih
+    - terimakasih
+    - thankyou so much
+    - terima kasih banyak
+    - makasih banyak
+    - thx
+    - hatur nuhun
+    - thx a lot
+    - oke terimakasih
+    - terima kasih
+    - makasih banyak
+    - thanks
+
+- intent: image_processing
+  examples: |
+    - pengolahan citra digital
+    - image processing
+    - Pengertian Pengolahan Citra Digital
+    - pcd
+    - apa itu pcd?
+    - apa itu pengolahan citra digital?
+    - Boleh tolong jelasin tentang pcd?
+    - Boleh tolong jelasin tentang pengolahan citra digital?
+    - jadi apa itu pcd?
+    - PCD itu apa ya?
+
+- intent: citra
+  examples: |
+    - Apa itu Citra
+    - Citra
+    - Penjelasan dari citra itu apa?
+    - Jelasin dong citra itu apa ya?
+    - Kalau citra itu apa?
+    - Boleh tolong jelasin tentang citra?
+    - jadi apa itu citra?
+    - citra itu apa ya?
+    - apa itu citra?
+    - pengertian citra
+    - oh kalau citra itu apa ya?
+    - jadi apa itu citra
+
+- intent: piksel
+  examples: |
+    - Apa itu piksel
+    - piksel
+    - Penjelasan dari piksel itu apa?
+    - Jelasin dong piksel itu apa ya?
+    - Kalau piksel itu apa?
+    - Boleh tolong jelasin tentang piksel?
+    - jadi apa itu piksel?
+    - piksel itu apa ya?
+    - apa itu piksel?
+    - pengertian piksel
+    - oh kalau piksel itu apa ya?
+    - jadi apa itu piksel
+
+- intent: filter
+  examples: |
+    - Apa itu filter
+    - filter
+    - Penjelasan dari filter itu apa?
+    - Jelasin dong filter itu apa ya?
+    - Kalau filter itu apa?
+    - Boleh tolong jelasin tentang filter?
+    - jadi apa itu filter?
+    - filter itu apa ya?
+    - apa itu filter?
+    - pengertian filter
+    - oh kalau filter itu apa ya?
+    - jadi apa itu filter
+
+- intent: border
+  examples: |
+    - Apa itu boder
+    - boder
+    - Penjelasan dari boder itu apa?
+    - Jelasin dong boder itu apa ya?
+    - Kalau boder itu apa?
+    - Boleh tolong jelasin tentang boder?
+    - jadi apa itu boder?
+    - boder itu apa ya?
+    - apa itu boder?
+    - pengertian boder
+    - oh kalau boder itu apa ya?
+    - jadi apa itu boder
+    - bagian sisi
+    - bagian pinggir
+    - bagian sisi kernel
+    - bagian pinggir kernel
+    - apakah bagian pinggir tidak dihitung?
+    - cara menghitung border yang di proses bagaimana?
+    - Bagian pinggir itu tidak dihitung?
+
+- intent: kernel
+  examples: |
+    - Apa itu kernel
+    - kernel
+    - Penjelasan dari kernel itu apa?
+    - Jelasin dong kernel itu apa ya?
+    - Kalau kernel itu apa?
+    - Boleh tolong jelasin tentang kernel?
+    - jadi apa itu kernel?
+    - kernel itu apa ya?
+    - apa itu kernel?
+    - pengertian kernel
+    - oh kalau kernel itu apa ya?
+    - jadi apa itu kernel
+
+- intent: konvolusi
+  examples: |
+    - Apa itu konvolusi
+    - konvolusi
+    - Penjelasan dari konvolusi itu apa?
+    - Jelasin dong konvolusi itu apa ya?
+    - Kalau konvolusi itu apa?
+    - Boleh tolong jelasin tentang konvolusi?
+    - jadi apa itu konvolusi?
+    - konvolusi itu apa ya?
+    - apa itu konvolusi?
+    - pengertian konvolusi
+    - oh kalau konvolusi itu apa ya?
+    - jadi apa itu konvolusi
+    - convolution
+
+- intent: step_konvolusi
+  examples: |
+    - boleh tolong jelaskan langkah langkah konvolusi ga?
+    - langkah langkah
+    - langkah
+    - tahapan
+    - tahapan konvolusi
+    - langkah langkah konvolusi apa aja ya?
+    - masih belum mengerti langkah konvolusi
+    - cara melakukan konvolusi seperti apa?
+    - cara konvolusi?
+    - cara
+    - cara kerja
+    - jelaskan cara melakukan konvolusi bagaimana cara melakukan konvolusi
+    - boleh tolong jelaskan cara melakukan konvolusi ga?
+    - jelaskan cara kerja melakukan konvolusi bagaimana cara melakukan konvolusi
+    - cara kerja konvolusi?
+    - boleh tolong jelaskan cara kerja melakukan konvolusi ga?
+
+- intent: hasil_konvolusi
+  examples: |
+    - Hasil dari konvolusi itu seperti apa ya?
+    - Hasilnya
+    - Hasil konvolusi
+    - Hasil citra setelah dilakukan konvolusi bagaimana?
+    - Boleh minta contoh hasilnya?
+    - Hasilnya kaya gimana?
+    - Seperti apa haisl konvolusi?
+    - Hasil
+
+- intent: fungsi_konvolusi
+  examples: |
+    - Fungsi dari konvolusi itu apa ya?
+    - Fungsi_konvolusi
+    - Fungsi konvolusi
+    - apa fungsi dari konvolusi?
+    - konvolusi untuk apa fungsinya?
+
+- intent: rumus_konvolusi
+  examples: |
+    - Rumus
+    - Formula
+    - Persamaan
+    - Rumus konvolusi
+    - Formula konvolusi
+    - Persamaan konvolusi
