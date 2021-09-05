@@ -2,11 +2,6 @@ version: "2.0"
 
 rules:
 
-- rule: Say goodbye anytime the user says goodbye
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
-
 - rule: Say hello anytime the user greet
   steps:
   - intent: greet
@@ -18,12 +13,6 @@ rules:
   - action: utter_pcd
   - action: utter_pcd1
   - action: utter_tanya
-
-# - rule: Selalu menjawab mengenai citra
-#   steps:
-#   - intent: citra
-#   - action: utter_citra
-#   - action: utter_tanya
 
 - rule: Selalu menjawab mengenai piksel
   steps:
@@ -46,10 +35,22 @@ rules:
   - action: utter_kernel1
   - action: utter_tanya
 
+- rule: Selalu menjawab mengenai citra
+  steps:
+  - intent: citra
+  - action: utter_citra
+  - action: utter_tanya
+
 - rule: Selalu menjawab mengenai konvolusi
   steps:
   - intent: konvolusi
   - action: utter_konvolusi
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai fungsi konvolusi
+  steps:
+  - intent: fungsi_konvolusi
+  - action: utter_fungsi
   - action: utter_tanya
 
 - rule: Selalu menjawab mengenai rumus konvolusi
@@ -101,16 +102,4 @@ rules:
   - action: utter_border2
   - action: utter_border3
   - action: utter_border4
-  - action: utter_tanya
-
-- rule: Selalu menjawab mengenai konvolusi
-  steps:
-  - intent: citra
-  - action: utter_konvolusi
-  - action: utter_tanya
-
-- rule: Selalu menjawab mengenai konvolusi
-  steps:
-  - intent: citra
-  - action: utter_konvolusi
   - action: utter_tanya
